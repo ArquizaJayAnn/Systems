@@ -4,7 +4,7 @@ require_once "config.php";
  
 // Define variables and initialize with empty values
 $name = $address = $birthdate = $salary = "";
-$name_err = $address_err = $birthdate = $salary_err = "";
+$name_err = $address_err = $birthdate_err = $salary_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -27,9 +27,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate birthdate
-    $input_birthdate = trim($_POST["address"]);
+    $input_birthdate = trim($_POST["birthdate"]);
     if(empty($input_birthdate)){
-        $birthdate_err = "Please enter an address.";     
+        $birthdate_err = "Please enter your birthdate.";     
     } else{
         $birthdate = $input_birthdate;
     }
